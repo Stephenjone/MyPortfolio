@@ -9,7 +9,7 @@ function Projects() {
         "Caffy is a minimalist paper coffee mug designed for modern coffee culture. Featuring a ribbed sleeve for improved grip and thermal comfort.",
   image: "/Assets/project1.jpg",
       alt: "Caffy Brand design",
-      link: "https://www.behance.net/portfolio/editor?project_id=243255541",
+      link: "https://www.behance.net/gallery/243255541/Cafy-Brand-design",
     },
     {
       title: "Broucher - Forward focused",
