@@ -1,0 +1,49 @@
+.banner {
+    min-height: 92vh;
+    background: radial-gradient(circle at center, #222121, #000000);
+    padding: 4rem 1rem;
+}
+
+.banner-title {
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    animation: fadeUp 1s ease forwards;
+}
+
+.highlight {
+    background: linear-gradient(90deg, #3db814, #2dc507);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 25px rgba(66, 237, 9, 0.35);
+}
+
+.muted {
+    color: #c9cbc8;
+    font-weight: 400;
+}
+
+.divider {
+    width: 80px;
+    height: 3px;
+    background: #42ed09;
+    margin: 1.5rem auto;
+    border-radius: 10px;
+}
+
+.banner-subtitle {
+    color: #9e9e9e;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
