@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 
 function Navbar() {
@@ -12,10 +12,32 @@ function Navbar() {
         LinkedIn: "https://www.linkedin.com/in/stephen-dharmdas-6aa8b483/" 
     };
 
+    const [open, setOpen] = useState(false);
+
+    const handleToggle = () => setOpen(prev => !prev);
+
+    const handleLinkClick = () => {
+        // close mobile menu after navigation
+        if (open) setOpen(false);
+    };
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark custom-navbar sticky-top">
             <div className="container justify-content-center">
-                <div className="navbar-nav gap-5 py-3 fs-6">
+                {/* Hamburger for mobile */}
+                <button
+                    className={`hamburger ${open ? 'open' : ''}`}
+                    aria-label={open ? 'Close navigation menu' : 'Open navigation menu'}
+                    aria-expanded={open}
+                    aria-controls="mobile-nav"
+                    onClick={handleToggle}
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div id="mobile-nav" className={`navbar-nav gap-5 py-3 fs-6 ${open ? 'open' : ''}`}>
                     {Object.keys(links).map(item => (
                         <a 
                             key={item} 
@@ -23,6 +45,7 @@ function Navbar() {
                             href={links[item]} 
                             target={item === "LinkedIn" || item === "Resume" ? "_blank" : "_self"}
                             rel={item === "LinkedIn" || item === "Resume" ? "noopener noreferrer" : ""}
+                            onClick={handleLinkClick}
                         >
                             {item}
                         </a>

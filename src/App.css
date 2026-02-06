@@ -24,6 +24,22 @@
   color: white;
 }
 
+/* Slightly reduce header height on smaller screens */
+@media (max-width: 768px) {
+  .App-header {
+    min-height: 80vh;
+    padding: 1rem 0.5rem;
+    font-size: calc(10px + 1.5vmin);
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    min-height: 65vh;
+    font-size: calc(10px + 1vmin);
+  }
+}
+
 .App-link {
   color: #61dafb;
 }

@@ -61,6 +61,13 @@
   font-weight: 300;
 }
 
+.project-title {
+  font-size: 1.5rem;
+  color: #42ed09;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
 
 
 /* Description */
@@ -130,5 +137,34 @@
 
   .projects-header {
     font-size: 2rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  #projects-section {
+    padding: 40px 12px;
+  }
+
+  .projects-header {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .projects-description,
+  .devprojects-description {
+    margin-left: 0;
+    max-width: 100%;
+    font-size: 0.95rem;
+    padding: 0 8px;
+  }
+
+  .project-img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .project-card {
+    padding: 18px;
   }
 }

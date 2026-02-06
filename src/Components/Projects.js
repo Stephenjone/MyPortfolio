@@ -7,7 +7,7 @@ function Projects() {
       title: "Caffy - Brand Design",
       description:
         "Caffy is a minimalist paper coffee mug designed for modern coffee culture. Featuring a ribbed sleeve for improved grip and thermal comfort.",
-      image: "./Assets/project1.jpg",
+  image: "/Assets/project1.jpg",
       alt: "Caffy Brand design",
       link: "https://www.behance.net/portfolio/editor?project_id=243255541",
     },
@@ -15,7 +15,7 @@ function Projects() {
       title: "Broucher - Forward focused",
       description:
         "Forward Focused is a comprehensive branding and packaging project designed for a leading supplier of sustainable food and beverage packaging solutions.",
-      image: "./Assets/project2.jpg",
+  image: "/Assets/project2.jpg",
       alt: "Broucher Design",
       link: "https://www.behance.net/gallery/243196935/Forward-Focused-LLC-Packaging-Visual-Identity",
     },
@@ -23,7 +23,7 @@ function Projects() {
       title: "Brand Design",
       description:
         "Brand identity design emphasizing structure, typography, and color harmony. Created to support consistent branding across multiple touchpoints.",
-      image: "./Assets/project3.jpg",
+  image: "/Assets/project3.jpg",
       alt: "Brand design project",
       link: "https://www.behance.net/gallery/142860947/Brand-design",
     },
@@ -31,7 +31,7 @@ function Projects() {
       title: "Brand Design",
       description:
         "UI design for a street-food delivery app focused on simplicity and quick ordering. Built to deliver a smooth, intuitive experience for users on the go.",
-      image: "./Assets/project4.jpg",
+  image: "/Assets/project4.jpg",
       alt: "Brand design project",
       link: "https://www.behance.net/gallery/242319205/Streefoo-UI-design-of-Street-food-delivery-app",
     },
@@ -39,7 +39,7 @@ function Projects() {
       title: "Illustrations Showcase",
       description:
         "A visual journey of expressive illustrations blending imagination with refined technique. Crafted to engage and inspire across diverse creative directions.",
-      image: "./Assets/project5.jpg",
+  image: "/Assets/project5.jpg",
       alt: "Brand design project",
       link: "https://www.behance.net/gallery/118681791/Illustrations",
     },
@@ -47,7 +47,7 @@ function Projects() {
       title: "Steejo Brand Design",
       description:
         "A stylish mobile interface concept for Steejo that blends aesthetic appeal with functional clarity. Designed to enhance interaction flow and visual engagement.",
-      image: "./Assets/project6.jpg",
+  image: "/Assets/project6.jpg",
       alt: "Brand design project",
       link: "https://www.behance.net/gallery/141543899/Steejo",
     },
@@ -55,7 +55,7 @@ function Projects() {
       title: "Lotus Catalogue Design",
       description:
         "A visually compelling catalogue design that highlights elegance and clarity. Created to showcase products through clean layouts and refined typography.",
-      image: "./Assets/project7.jpg",
+  image: "/Assets/project7.jpg",
       alt: "Brand design project",
       link: "https://www.behance.net/gallery/142388035/Lotus_Catalogue",
     },
@@ -63,7 +63,7 @@ function Projects() {
       title: "Trifold Brochure Design",
       description:
         "A thoughtful trifold brochure design highlighting structured layout and clear communication. Crafted to present key information in an elegant, easy-to-read format.",
-      image: "./Assets/project8.jpg",
+  image: "/Assets/project8.jpg",
       alt: "Brand design project",
       link: "https://www.behance.net/gallery/142001017/Trifold",
     },
@@ -71,7 +71,7 @@ function Projects() {
       title: "Text Animation Showcase",
       description:
         "A collection of dynamic text animation experiments focused on rhythm and motion. Designed to enhance engagement through fluid, expressive typography.",
-      image: "./Assets/project9.jpg",
+  image: "/Assets/project9.jpg",
       alt: "Brand design project",
       link: "https://www.behance.net/gallery/141038745/Text_Animation",
     },
@@ -79,7 +79,7 @@ function Projects() {
       title: "Logo Motion Graphics",
       description:
         "A thoughtful trifold brochure design highlighting structured layout and clear communication. Crafted to present key information in an elegant, easy-to-read format.",
-      image: "./Assets/project10.jpg",
+  image: "/Assets/project10.jpg",
       alt: "Brand design project",
       link: "https://www.behance.net/gallery/141036319/Logo-Motion-design",
     },
@@ -92,7 +92,7 @@ function Projects() {
       title: "PickNPay",
       description:
         "PickNPay is a food orderng app, where the associated can explore the foods from the office resturant and place a order and pay the payment while collecting the food from the resturant. ",
-      image: "./Assets/projecta.jpg",
+  image: "/Assets/projecta.jpg",
       alt: "Development project",
       link: "https://github.com/Stephenjone/PickNPay-frontend",
     },
@@ -123,7 +123,7 @@ function Projects() {
           </div>
           
         ))}
-      </div>
+      </div><br></br><br></br><br></br><br></br><br></br><br></br>
       <h2 className="projects-header"> Development Projects</h2>
       <div className="projects-container">
         {developmentProject.map((project, index) => (
