@@ -6,10 +6,11 @@ function Navbar() {
         Home: "#",
         Profile: "#profile",
         Skills: "#skills-container",
-        Projects: "#projects-section",
+        Projects: "#projects",
         Contact: "#",
         Resume: "/STEPHEN S DHARMDAS.pdf",
-        LinkedIn: "https://www.linkedin.com/in/stephen-dharmdas-6aa8b483/" 
+        LinkedIn: "https://www.linkedin.com/in/stephen-dharmdas-6aa8b483/",
+        Behance: "https://www.behance.net/jonesstephf2d5" 
     };
 
     const [open, setOpen] = useState(false);

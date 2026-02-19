@@ -1,7 +1,7 @@
 .banner {
     min-height: 92vh;
-    background: radial-gradient(circle at center, #222121, #000000);
     padding: 4rem 1rem;
+    background: radial-gradient(circle at center, #2b2828, #000000);
 }
 
 .banner-title {

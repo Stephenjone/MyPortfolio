@@ -1,29 +1,14 @@
-/* Profile.css */
-
 #profile {
-    min-height: 80vh;
-    background: radial-gradient(circle at center, #2b2828, #000000);
-    padding: 4rem 10%; 
+    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center; 
-}
-
-/* Merge your two .profile-text blocks into this */
-.profile-text {
-    font-size: 24px !important; 
-    color: #fff;
-    font-weight: 300;
-    line-height: 1.6;
-    flex: 1;
-    max-width: 600px;
-    text-align: left; 
-    text-wrap: balance;
+    background: radial-gradient(circle at center, #2b2828, #000000);
 }
 
 .profile-h2 {
-    margin-bottom: 60px;
-    font-size: 45px;
+    padding:30px;
+    font-size: 32px;
     font-weight: 300; 
     color: #fff;
     text-align: center;

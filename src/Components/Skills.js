@@ -5,7 +5,7 @@ const Skills = () => {
     const skillSets = [
         {
             title: "Design",
-            tools: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Indesign", "UI/UX Layouts", "Typography", "Adobe Premier pro"]
+            tools: ["Adobe Photoshop", "Adobe Illustrator", "Adobe Indesign", "Figma","UI/UX Layouts", "Typography", "Adobe Premier pro"]
         },
         {
             title: "Development",

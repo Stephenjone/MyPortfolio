@@ -1,0 +1,90 @@
+/* Library.css */
+
+.library-container {
+  min-height: 100vh;
+  /* Matching your Branding page radial gradient */
+  background: radial-gradient(circle at center, #353333, #000000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.library-title {
+  font-family: 'Barques', sans-serif; /* Ensure Barques is loaded in your index.css */
+  font-size: 80px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  color: #FFFFFF;
+  margin-bottom: 50px;
+  
+  /* Neon Glow Effect (Matching image_f793a1.jpg) */
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa, 
+    0 0 82px #0fa;
+    
+  animation: flicker 3s infinite alternate;
+}
+
+.video-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  
+  /* Glassmorphism Frame */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* Lift and soft shadow */
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5),
+              0 0 15px rgba(0, 255, 170, 0.1); /* Subtle neon bleed */
+  
+  transition: transform 0.5s ease;
+}
+
+.video-wrapper:hover {
+  transform: scale(1.01);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6),
+              0 0 30px rgba(0, 255, 170, 0.2);
+}
+
+.video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* Slight contrast boost for professional look */
+  filter: contrast(1.05) brightness(0.95);
+}
+
+/* Flicker Animation for the Neon Title */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.7;
+    text-shadow: none;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .library-title {
+    font-size: 40px;
+    letter-spacing: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .video-wrapper {
+    border-radius: 12px;
+  }
+}

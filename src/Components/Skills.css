@@ -1,17 +1,17 @@
 /* Skills.css */
 #skills-container {
-    padding: 4rem 10%;
-    background: radial-gradient(circle at center, #2b2828, #000000);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom:50px;
+    background: radial-gradient(circle at center, #2b2828, #000000);
 }
 
 .skills-title {
     color: #fff;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 300;
-    margin-bottom: 40px;
+    padding:30px;
 }
 
 .skills-grid {

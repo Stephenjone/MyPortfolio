@@ -1,126 +1,44 @@
-/* Footer.css - responsive footer styles */
 .footer-section {
-  background: radial-gradient(circle at center, #181717, #0f0f0f);
-  color: #dfe0df;
-  padding: 2.5rem 10%;
-  border-top: 1px solid rgba(255,255,255,0.03);
+  background-color: #000; /* Matches your dark theme */
+  padding: 40px 20px;
+  border-top: 1px solid #1a1a1a; /* Subtle separator */
+  color: #888; /* Soft grey for secondary info */
+  font-family: 'Inter', sans-serif; /* Clean sans-serif */
 }
 
 .footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
   max-width: 1200px;
-  margin: 0 auto 1rem;
-}
-
-.footer-contact {
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.footer-link {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 300;
-  transition: color 0.18s ease, transform 0.12s ease;
-}
-
-.footer-link:hover,
-.footer-link:focus {
-  color: #42ed09;
-  transform: translateY(-1px);
-}
-
-.footer-social {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.social-link {
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: transparent;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
-  transition: transform 0.16s ease, box-shadow 0.16s ease;
-}
-
-.social-link svg {
-  display: block;
-}
-
-.social-link:hover,
-.social-link:focus {
-  transform: translateY(-4px);
-}
-
-.resume-link {
-  color: #42ed09;
-  border: 1px solid rgba(66,237,9,0.2);
-  padding: 8px 12px;
-  border-radius: 20px;
-  text-decoration: none;
-  font-weight: 400;
-}
-
-.resume-link:hover,
-.resume-link:focus {
-  background: rgba(66,237,9,0.06);
 }
 
 .footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
   text-align: center;
-  color: #9b9b9b;
-  font-size: 0.9rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-/* Responsive: stack content on narrow screens */
-@media (max-width: 768px) {
-  .footer-section {
-    padding: 2rem 6%;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-contact {
-    align-items: center;
-  }
-
-  .footer-social {
-    margin-top: 8px;
-  }
+.footer-link {
+  color: #4ade80; /* Neon green to match your "Design" text */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  font-weight: 500;
 }
 
-@media (max-width: 480px) {
-  .footer-section {
-    padding: 1.5rem 5%;
-  }
+.footer-link:hover {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(74, 222, 128, 0.6); /* Subtle glow on hover */
+}
 
-  .social-link {
-    width: 36px;
-    height: 36px;
-  }
-
-  .resume-link {
-    padding: 6px 10px;
-    font-size: 0.95rem;
-  }
-
+/* Responsive tweak for smaller screens */
+@media (max-width: 600px) {
   .footer-bottom {
-    font-size: 0.86rem;
+    flex-direction: column;
+    gap: 12px;
   }
 }

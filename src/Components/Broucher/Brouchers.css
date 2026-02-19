@@ -1,0 +1,148 @@
+/* MAIN SECTION */
+.brouchers{
+  min-height:100vh;
+  background:radial-gradient(circle at center,#000,#000000);
+}
+
+/* HERO SECTION */
+.brouchers-hero{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.brouchers-hero::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20vh; /* Adjust height of the fade */
+  background: linear-gradient(to bottom, transparent, #000000);
+  z-index: 5; /* Sits above the image but below the H2 */
+}
+
+
+.brouchers-hero img{
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+  display: block;
+
+  /* This creates the fade effect at the bottom */
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+.hero-overlay{
+  position:absolute;
+  bottom:60px;
+  left:60px;
+  color:white;
+}
+
+.brouchers-hero h2 {
+  font-family: 'Barques', sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 18px; 
+  position: absolute;
+  top: 25%;
+  z-index: 10;
+  color: #c7c5c5;
+  mix-blend-mode: normal;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.7);
+}
+
+/* GRID */
+.coverpage{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
+  padding:80px 40px;
+}
+
+/* CARD */
+.brouchers-card{
+  position:relative;
+  width:500px;
+  height:300px;
+  border-radius:14px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+
+.brouchers-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* HOVER EFFECT */
+.brouchers-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 20px 40px rgba(0,0,0,.45);
+}
+
+/* TITLE OVERLAY */
+.overlay{
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  background:linear-gradient(transparent,rgba(0,0,0,.85));
+  padding:20px;
+  opacity:0;
+  transition:opacity .3s ease;
+}
+
+.overlay h3{
+  color:white;
+  font-size:22px;
+}
+
+.brouchers-card:hover .overlay{
+  opacity:1;
+}
+
+/* TABLET */
+@media(max-width:1024px){
+  .brouchers-card{
+    width:90%;
+    height:260px;
+  }
+
+  .hero-overlay h1{
+    font-size:44px;
+  }
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .coverpage{
+    padding:60px 20px;
+  }
+
+  .brouchers-hero{
+    height:60vh;
+  }
+
+  .hero-overlay{
+    left:20px;
+    bottom:30px;
+  }
+
+  .hero-overlay h1{
+    font-size:32px;
+  }
+
+  .brouchers-card{
+    height:220px;
+  }
+}
