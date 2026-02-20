@@ -17,7 +17,7 @@ function Brouchers() {
   return (
     <section className="brouchers">
       <div className="brouchers-hero">
-         <img src="/Assets/Brand-Design/Brand-coverpage.jpg"/>
+         <img src="/Assets/Brand-Design/Brand-coverpage.jpg" alt=""/>
          <h2>Brouchers & Catalogues</h2>
       </div>
 

@@ -26,7 +26,7 @@ function Branding() {
   return (
     <section className="branding">
       <div className="branding-hero">
-        <img src="/Assets/Brand-Design/Brand-coverpage.jpg"/>
+        <img src="/Assets/Brand-Design/Brand-coverpage.jpg" alt=""/>
         <h2>Branding</h2>
       </div>
       <div className="coverpage">

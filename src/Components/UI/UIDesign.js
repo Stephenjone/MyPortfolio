@@ -26,7 +26,7 @@ function UIDesign() {
   return (
     <section className="ui">
       <div className="ui-hero">
-         <img src="/Assets/Brand-Design/Brand-coverpage.jpg"/>
+         <img src="/Assets/Brand-Design/Brand-coverpage.jpg" alt=""/>
         <h2>UI Design</h2>
       </div>
       <div className="coverpage">
@@ -38,7 +38,8 @@ function UIDesign() {
             target="_blank" // This will open the library in a new tab
             rel="noreferrer"
           >
-            <img src={project.img} alt={project.title} />
+            <img src={project.img} alt={project.title} 
+            />
             <div className="overlay">
               <h3>{project.title}</h3>
             </div>
