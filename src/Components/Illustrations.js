@@ -30,7 +30,7 @@ function Illustrations() {
           {
             images.map((image, index) => (
               <li key={index}>
-                <img src={image.src} allt={image.alt} />
+                <img src={image.src} alt={image.alt} />
               </li>
             ))
           }
