@@ -22,7 +22,7 @@ function Illustrations() {
   return (
     <section className="illustrations">
       <div className="illustrations-hero">
-        <img src="/Assets/Brand-Design/Brand-coverpage.jpg"/>
+        <img src="/Assets/Brand-Design/Brand-coverpage.jpg" alt=""/>
         <h2>Illustration</h2>
       </div>
       <div className="illustrations-gallery">
