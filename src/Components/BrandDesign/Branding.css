@@ -26,13 +26,16 @@
   position: absolute;
   z-index: 10;
   font-family: 'Barques', sans-serif;
-  font-size: 90px;
+  /* scale between small and large screens */
+  font-size: clamp(28px, 6vw, 90px);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 18px;
+  letter-spacing: clamp(4px, 2.5vw, 18px);
   color: #c7c5c5;
-  text-align:center;
-  margin-left:500px;            
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
   text-shadow: 0 0 10px rgba(74, 222, 128, 0.7);
 }
 
@@ -133,6 +136,12 @@
   display: flex;
 }
 
+/* Make cards flexible so they wrap and resize on narrow viewports */
+.coverpage > a.branding-card {
+  flex: 1 1 320px; /* allow wrapping and flexible width */
+  max-width: 500px;
+}
+
 .branding-card img {
   width: 100%;
   height: 100%;
@@ -190,6 +199,12 @@
     width: 90%;
     height: 260px;
   }
+
+  /* Stack content vertically on tablets */
+  .coverpage {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 
 @media (max-width: 600px) {
@@ -210,5 +225,13 @@
   .branding-card {
     width: 100%;
     height: 220px;
+  }
+}
+
+/* Touch-friendly overlays: show overlay content on non-hover devices */
+@media (hover: none), (max-width: 600px) {
+  .overlay {
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.45);
   }
 }

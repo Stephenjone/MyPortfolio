@@ -1,14 +1,51 @@
-.custom-navbar {
-    background:#1b1a1a;
-    backdrop-filter: blur(10px);
+/* ================================================= */
+/* ================= NAVBAR BASE =================== */
+/* ================================================= */
+body {
+    overflow-x: hidden;
 }
+
+.custom-navbar {
+    background: #1b1a1a;
+    backdrop-filter: blur(10px);
+    padding: 0.8rem 2rem;
+    position: relative;
+    z-index: 1200;
+    width: 100%;
+}
+
+/* Container fix (important for iPad width issue) */
+.custom-navbar .container {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ================================================= */
+/* ================= DESKTOP NAV =================== */
+/* ================================================= */
+
+.navbar-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* ================================================= */
+/* ================= NAV LINKS ===================== */
+/* ================================================= */
 
 .custom-link {
     color: #e0e0e0 !important;
     position: relative;
-    padding-bottom: 4px;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 6px 0;
     transition: color 0.3s ease;
-    font-size:18px;
 }
 
 .custom-link::after {
@@ -17,7 +54,7 @@
     width: 0;
     height: 2px;
     left: 0;
-    bottom: 0;
+    bottom: -2px;
     background: #42ed09;
     transition: width 0.3s ease;
 }
@@ -30,58 +67,33 @@
     width: 100%;
 }
 
-/* Responsive tweaks for navbar */
-@media (max-width: 992px) {
-    .custom-navbar {
-        padding: 0.5rem 1rem;
-    }
+/* ================================================= */
+/* ================= HAMBURGER ===================== */
+/* ================================================= */
 
-    .custom-link {
-        font-size: 16px;
-        padding: 6px 6px 4px 6px;
-    }
-
-    /* allow nav items to wrap if they are inline */
-    .custom-navbar .nav-items,
-    .nav-items {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .custom-link {
-        font-size: 14px;
-        padding: 6px 4px 4px 4px;
-    }
-}
-
-/* Hamburger button */
 .hamburger {
-    display: none; /* shown on small screens */
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    align-items: center;
+    display: none;
+    flex-direction: column;
     justify-content: center;
+    cursor: pointer;
+    background: transparent;
+    border: none;
     width: 44px;
     height: 44px;
-    padding: 6px;
+    z-index: 1300;
 }
 
 .hamburger span {
-    display: block;
-    width: 22px;
+    width: 24px;
     height: 2px;
     background: #e0e0e0;
     margin: 4px 0;
-    transition: transform 0.25s ease, opacity 0.25s ease;
+    transition: all 0.3s ease;
 }
 
+/* Animation */
 .hamburger.open span:nth-child(1) {
-    transform: translateY(6px) rotate(45deg);
+    transform: rotate(45deg) translateY(8px);
 }
 
 .hamburger.open span:nth-child(2) {
@@ -89,65 +101,166 @@
 }
 
 .hamburger.open span:nth-child(3) {
-    transform: translateY(-6px) rotate(-45deg);
+    transform: rotate(-45deg) translateY(-8px);
 }
 
-/* Mobile navigation overlay */
-@media (max-width: 768px) {
-    .hamburger {
-        display: flex;
-        margin-right: 12px;
+/* ================================================= */
+/* =============== LARGE TABLETS =================== */
+/* =============== 1200px and below =============== */
+/* ================================================= */
+
+@media (max-width: 1200px) {
+
+    .custom-navbar {
+        padding: 0.8rem 1.5rem;
     }
 
-    /* hide center-aligned desktop nav; transform into overlay */
     .navbar-nav {
+        gap: 22px;
+    }
+
+    .custom-link {
+        font-size: 17px;
+    }
+}
+
+
+/* ================================================= */
+/* ================= TABLETS ======================= */
+/* ================= 992px and below ============== */
+/* ================================================= */
+
+@media (max-width: 992px) {
+
+    .hamburger {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 20px;
+    }
+
+    .navbar-nav {
         position: fixed;
         top: 0;
-        left: 0;
         right: 0;
+
+        width: 100%;
         height: 100vh;
-        padding-top: 100px;
+
         background: rgba(27, 26, 26, 0.98);
-        transform: translateY(-100%);
-        transition: transform 0.28s ease;
-        z-index: 1100;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 35px;
+
+        transform: translateX(100%);
+        transition: transform 0.35s ease-in-out;
     }
 
     .navbar-nav.open {
-        transform: translateY(0);
+        transform: translateX(0);
     }
 
-    /* Style links for large tappable area */
-    .navbar-nav .nav-link.custom-link {
-        font-size: 20px;
-        padding: 12px 0;
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-
-    /* reduce desktop container centering conflicts */
-    .custom-navbar .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    /* ensure link underline matches */
-    .custom-link::after {
-        left: 50%;
-        transform: translateX(-50%);
+    .navbar-nav .custom-link {
+        font-size: 22px;
     }
 }
 
-@media (max-width: 480px) {
-    .navbar-nav .nav-link.custom-link {
+
+/* ================================================= */
+/* ================= LARGE MOBILE ================== */
+/* ================= 768px and below ============== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+    .custom-navbar {
+        padding: 0.7rem 1.2rem;
+    }
+
+    .navbar-nav {
+        gap: 30px;
+    }
+
+    .navbar-nav .custom-link {
+        font-size: 20px;
+    }
+
+    .hamburger {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hamburger span {
+        width: 22px;
+    }
+}
+
+
+/* ================================================= */
+/* ================= SMALL MOBILE ================== */
+/* ================= 576px and below ============== */
+/* ================================================= */
+
+@media (max-width: 576px) {
+
+    .navbar-nav .custom-link {
         font-size: 18px;
-        padding: 14px 0;
+    }
+
+    .navbar-nav {
+        gap: 25px;
+    }
+}
+
+
+/* ================================================= */
+/* =============== EXTRA SMALL DEVICES ============ */
+/* =============== 375px and below ================ */
+/* ================================================= */
+
+@media (max-width: 375px) {
+
+    .navbar-nav .custom-link {
+        font-size: 16px;
+    }
+
+    .navbar-nav {
+        gap: 20px;
+    }
+}
+
+
+/* ================================================= */
+/* =============== VERY SMALL (320px) ============= */
+/* ================================================= */
+
+@media (max-width: 320px) {
+
+    .custom-navbar {
+        padding: 0.6rem 1rem;
+    }
+
+    .navbar-nav .custom-link {
+        font-size: 15px;
+    }
+
+    .navbar-nav {
+        gap: 18px;
+    }
+}
+
+
+/* ================================================= */
+/* ============== TOUCH DEVICE FIX ================= */
+/* ================================================= */
+
+@media (hover: none) {
+
+    .custom-link:hover {
+        color: #e0e0e0 !important;
+    }
+
+    .custom-link:hover::after {
+        width: 0;
     }
 }

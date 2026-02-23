@@ -1,7 +1,7 @@
 /* Container background */
 #projects {
   background: radial-gradient(circle at center, #2b2828, #000000);
-  min-height: 60vh;
+  padding: 80px 0;
   overflow-x: hidden; 
 }
 
@@ -73,4 +73,101 @@
   margin: 0; 
   max-width: 90%; 
   line-height: 1.4;
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .projects-section {
+    gap: 25px;
+  }
+
+  .illustration-section, 
+  .branding-section, 
+  .brouchers-section, 
+  .motion-graphics-section,
+  .ui-section {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+
+/* ================================================= */
+/* ================= TABLET ======================== */
+/* ================================================= */
+
+@media (max-width: 992px) {
+
+  .projects-section {
+    gap: 25px;
+  }
+
+  .illustration-section, 
+  .branding-section, 
+  .brouchers-section, 
+  .motion-graphics-section,
+  .ui-section {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/* ================================================= */
+/* ================= MOBILE ======================== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  #projects {
+    padding: 60px 6%;
+  }
+
+  .projects-section {
+    gap: 20px;
+  }
+
+  .illustration-section, 
+  .branding-section, 
+  .brouchers-section, 
+  .motion-graphics-section,
+  .ui-section {
+    width: 100%;
+    max-width: 320px;
+    height: 200px;
+  }
+
+  .illustrations-title, 
+  .branding-title, 
+  .brouchers-title, 
+  .motion-graphics-title,
+  .ui-title {
+    font-size: 20px;
+  }
+}
+
+
+/* ================================================= */
+/* ================= SMALL MOBILE ================== */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+  .illustration-section, 
+  .branding-section, 
+  .brouchers-section, 
+  .motion-graphics-section,
+  .ui-section {
+    height: 180px;
+  }
+
+  .illustrations-title, 
+  .branding-title, 
+  .brouchers-title, 
+  .motion-graphics-title,
+  .ui-title {
+    font-size: 18px;
+  }
 }

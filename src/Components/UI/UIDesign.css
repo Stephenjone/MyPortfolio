@@ -36,12 +36,14 @@
 
 .ui-hero h2 {
   font-family: 'Barques', sans-serif;
-  font-size: 90px;
+  font-size: clamp(28px, 6vw, 90px);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 18px; 
+  letter-spacing: clamp(6px, 2.5vw, 18px);
   position: absolute;
   top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
   color: #c7c5c5;
   mix-blend-mode: normal;
@@ -59,7 +61,8 @@
 
 .ui-card{
   position:relative;
-  width:500px;
+  width:100%;
+  max-width:500px;
   height:300px;
   border-radius:14px;
   overflow:hidden;
@@ -129,6 +132,11 @@
 
 .ui-card:hover .overlay{
   opacity:1;
+}
+
+/* Show overlay on touch devices where :hover is not available */
+@media (hover: none), (max-width: 600px) {
+  .overlay { opacity: 1; background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.4), transparent); }
 }
 
 /* TABLET */

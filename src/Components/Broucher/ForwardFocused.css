@@ -40,3 +40,21 @@
   display: block;
   margin: 40px auto; 
 }
+
+@media (max-width: 768px) {
+  .forwardfocused {
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+  }
+
+  .forwardfocused img {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .forwardfocused-heading,
+  .forwardfocused-span {
+    text-align: center;
+  }
+}

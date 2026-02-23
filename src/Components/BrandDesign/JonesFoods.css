@@ -12,3 +12,8 @@
   height:auto;
   border-radius:12px;
 }
+
+@media (max-width: 768px) {
+  .jonesfoodspage { padding: 20px; }
+  .jonesfoodspage img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+}

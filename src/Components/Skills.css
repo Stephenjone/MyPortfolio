@@ -28,12 +28,14 @@
     border-radius: 20px;
     padding: 30px;
     transition: all 0.3s ease;
+    will-change: transform;
 }
 
 .skill-card:hover {
     transform: translateY(-10px);
     border-color: #42ed09; 
     background: rgba(255, 255, 255, 0.06);
+    box-shadow: 0 15px 35px rgba(66, 237, 9, 0.15);
 }
 
 .skill-category {
@@ -63,9 +65,96 @@
     margin-right: 10px;
     color: #42ed09;
 }
+/* ================================================= */
+/* ================= ULTRA LARGE =================== */
+/* ================= 1600px+ ======================= */
+/* ================================================= */
 
-/* Responsive skills layout */
+@media (min-width: 1600px) {
+
+    .skills-grid {
+        max-width: 1300px;
+        gap: 40px;
+    }
+
+    .skill-card {
+        padding: 35px;
+    }
+
+    .skills-title {
+        font-size: 36px;
+    }
+}
+
+
+/* ================================================= */
+/* ================= LARGE DESKTOP ================= */
+/* ================= 1200px - 1599px =============== */
+/* ================================================= */
+
+@media (max-width: 1400px) {
+
+    .skills-grid {
+        gap: 30px;
+    }
+
+    .skill-card {
+        padding: 28px;
+    }
+}
+
+
+/* ================================================= */
+/* ================= LARGE TABLET ================== */
+/* ================= 1200px and below ============== */
+/* ================================================= */
+
+@media (max-width: 1200px) {
+
+    #skills-container {
+        padding: 3rem 5%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 25px;
+    }
+
+    .skill-category {
+        font-size: 22px;
+    }
+
+    .skill-item {
+        font-size: 17px;
+    }
+}
+
+
+/* ================================================= */
+/* ================= TABLET ======================== */
+/* ================= 992px and below =============== */
+/* ================================================= */
+
+@media (max-width: 992px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .skill-card {
+        padding: 25px;
+    }
+}
+
+
+/* ================================================= */
+/* ================= LARGE MOBILE ================== */
+/* ================= 768px and below =============== */
+/* ================================================= */
+
 @media (max-width: 768px) {
+
     #skills-container {
         padding: 3rem 6%;
     }
@@ -76,13 +165,11 @@
     }
 
     .skill-card {
-        padding: 20px;
+        padding: 22px;
     }
-}
 
-@media (max-width: 480px) {
-    .skills-title {
-        font-size: 24px;
+    .skill-category {
+        font-size: 20px;
     }
 
     .skill-item {
@@ -90,3 +177,67 @@
     }
 }
 
+
+/* ================================================= */
+/* ================= SMALL MOBILE ================== */
+/* ================= 576px and below =============== */
+/* ================================================= */
+
+@media (max-width: 576px) {
+
+    .skills-title {
+        font-size: 24px;
+        padding: 20px 0;
+    }
+
+    .skill-card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .skill-category {
+        font-size: 18px;
+    }
+
+    .skill-item {
+        font-size: 15px;
+    }
+}
+
+
+/* ================================================= */
+/* ================= EXTRA SMALL =================== */
+/* ================= 375px and below =============== */
+/* ================================================= */
+
+@media (max-width: 375px) {
+
+    .skill-card {
+        padding: 16px;
+    }
+
+    .skill-item {
+        font-size: 14px;
+    }
+}
+
+
+/* ================================================= */
+/* ================= VERY SMALL ==================== */
+/* ================= 320px and below =============== */
+/* ================================================= */
+
+@media (max-width: 320px) {
+
+    .skill-card {
+        padding: 14px;
+    }
+
+    .skill-category {
+        font-size: 16px;
+    }
+
+    .skill-item {
+        font-size: 13.5px;
+    }
+}

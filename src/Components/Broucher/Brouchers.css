@@ -41,12 +41,14 @@
 
 .brouchers-hero h2 {
   font-family: 'Barques', sans-serif;
-  font-size: 70px;
+  font-size: clamp(28px, 6vw, 70px);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 18px;
+  letter-spacing: clamp(6px, 2.5vw, 18px);
   position: absolute;
   top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 10;
   color: #c7c5c5;
   text-shadow: 0 0 10px rgba(74, 222, 128, 0.7);
@@ -148,6 +150,11 @@
 
 .brouchers-card:hover .overlay {
   opacity: 1;
+}
+
+/* Make overlay visible on touch devices */
+@media (hover: none), (max-width: 600px) {
+  .overlay { opacity: 1; }
 }
 
 /* ============================= */

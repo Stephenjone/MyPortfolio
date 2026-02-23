@@ -1,9 +1,13 @@
+/* ================================================= */
+/* ================= BASE ========================== */
+/* ================================================= */
+
 .footer-section {
-  background-color: #000; /* Matches your dark theme */
-  padding: 40px 20px;
-  border-top: 1px solid #1a1a1a; /* Subtle separator */
-  color: #888; /* Soft grey for secondary info */
-  font-family: 'Inter', sans-serif; /* Clean sans-serif */
+  background-color: #000;
+  padding: 60px 5%;
+  border-top: 1px solid #1a1a1a;
+  color: #888;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-inner {
@@ -23,8 +27,13 @@
   text-align: center;
 }
 
+
+/* ================================================= */
+/* ================= LINKS ========================= */
+/* ================================================= */
+
 .footer-link {
-  color: #4ade80; /* Neon green to match your "Design" text */
+  color: #4ade80;
   text-decoration: none;
   transition: color 0.3s ease, text-shadow 0.3s ease;
   font-weight: 500;
@@ -32,13 +41,94 @@
 
 .footer-link:hover {
   color: #fff;
-  text-shadow: 0 0 8px rgba(74, 222, 128, 0.6); /* Subtle glow on hover */
+  text-shadow: 0 0 8px rgba(74, 222, 128, 0.6);
 }
 
-/* Responsive tweak for smaller screens */
-@media (max-width: 600px) {
+
+/* ================================================= */
+/* ================= LARGE TABLET ================== */
+/* ================================================= */
+
+@media (max-width: 1200px) {
+
+  .footer-section {
+    padding: 50px 6%;
+  }
+
+  .footer-bottom {
+    gap: 20px;
+    font-size: 13.5px;
+  }
+}
+
+
+/* ================================================= */
+/* ================= TABLET ======================== */
+/* ================================================= */
+
+@media (max-width: 992px) {
+
+  .footer-section {
+    padding: 50px 6%;
+  }
+
+  .footer-bottom {
+    gap: 18px;
+    font-size: 13px;
+  }
+}
+
+
+/* ================================================= */
+/* ================= MOBILE ======================== */
+/* ================================================= */
+
+@media (max-width: 768px) {
+
+  .footer-section {
+    padding: 45px 6%;
+  }
+
   .footer-bottom {
     flex-direction: column;
+    gap: 14px;
+    font-size: 13px;
+  }
+}
+
+
+/* ================================================= */
+/* ================= SMALL MOBILE ================== */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+  .footer-section {
+    padding: 40px 5%;
+  }
+
+  .footer-bottom {
     gap: 12px;
+    font-size: 12.5px;
+  }
+
+  .footer-link {
+    font-size: 13px;
+  }
+}
+
+
+/* ================================================= */
+/* ================= EXTRA SMALL =================== */
+/* ================================================= */
+
+@media (max-width: 375px) {
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+
+  .footer-link {
+    font-size: 12.5px;
   }
 }
