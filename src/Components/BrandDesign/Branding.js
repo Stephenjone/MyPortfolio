@@ -26,14 +26,36 @@ function Branding() {
   return (
     <section className="branding">
       <div className="branding-hero">
-        <img src="/Assets/Brand-Design/Brand-coverpage.jpg" alt=""/>
-        <h2>Branding</h2>
+        <img src="/Assets/Brand-Design/Brand-coverpage.jpg" alt="" />
+        <h2 className="brandinghero-heading">Branding</h2>
       </div>
       <div className="coverpage">
+        <div>
+          <h2><span>Overview</span>This section presents branding projects completed as part of my professional role as a Graphic Designer. The work demonstrates my ability to develop and implement visual identity systems aligned with client and business objectives. These projects reflect my experience in delivering structured branding solutions within commercial environments, ensuring consistency, functionality, and alignment with business strategy.</h2><br></br>
+          <h2><span>Scope of Work</span>
+
+            ✔  Interpreted client briefs and defined brand requirements<br></br>
+
+            ✔  Conducted research on target audience and competitors<br></br>
+
+            ✔  Developed logo concepts and visual identity systems<br></br>
+
+            ✔  Created typography, color palettes, and brand assets<br></br>
+
+            ✔  Prepared artwork for print and digital production<br></br>
+
+            ✔  Applied branding across marketing collateral and digital platforms<br></br>
+
+            ✔  Coordinated revisions based on stakeholder feedback</h2><br></br>
+
+          <h2><span>Tools Used</span>Adobe Illustrator and Adobe Photoshop</h2>
+          <br></br>
+        </div>
+
         {brandingProjects.map((project) => (
-          <a 
-            key={project.id} 
-            href={project.link} 
+          <a
+            key={project.id}
+            href={project.link}
             className="branding-card"
             target={project.link.startsWith("http") ? "_blank" : "_self"}
             rel="noreferrer"

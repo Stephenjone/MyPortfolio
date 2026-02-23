@@ -67,6 +67,27 @@
   transition:transform .35s ease, box-shadow .35s ease;
 }
 
+.coverpage h2 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  color: #d1d1d1;
+  text-align: left; 
+  max-width: 1600px;
+  margin: 0 0 30px 0; 
+}
+
+.coverpage span {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.8;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+}
+
 .ui-card img{
   width:100%;
   height:100%;
