@@ -29,7 +29,8 @@
 .branding-section, 
 .brouchers-section, 
 .motion-graphics-section,
-.ui-section {
+.ui-section,
+.marketing-section {
   height: 300px;
   width: 300px;
   display: flex;
@@ -52,7 +53,8 @@
 .branding-section:hover,
 .brouchers-section:hover,
 .motion-graphics-section:hover,
-.ui-section:hover {
+.ui-section:hover,
+.marketing-section:hover {
   transform: translateY(-10px);
   border-color: #42ed09; 
   background: rgba(255, 255, 255, 0.08); 
@@ -64,7 +66,8 @@
 .branding-title, 
 .brouchers-title, 
 .motion-graphics-title,
-.ui-title {
+.ui-title,
+.marketing-title {
   color: #fff;
   font-size: 25px;
   font-weight: 300;

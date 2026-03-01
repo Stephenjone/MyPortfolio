@@ -1,24 +1,47 @@
 /* ============================= */
 /* MAIN SECTION */
 /* ============================= */
-
 .branding {
   min-height: 100vh;
-  background: radial-gradient(circle at center, #000, #000000);
+  background: radial-gradient(circle at center, #111, #000);
   display: flex;
   flex-direction: column;
 }
 
+/* BACK BUTTON */
+.back-btn {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn svg { width: 18px; height: 18px; }
+
 /* ============================= */
 /* HERO SECTION */
 /* ============================= */
-
 .branding-hero {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start; 
-  height: 60vh;
+  justify-content: center;
+  height: 55vh;
   overflow: hidden;
 }
 
@@ -26,158 +49,119 @@
   position: absolute;
   z-index: 10;
   font-family: 'Barques', sans-serif;
-  /* scale between small and large screens */
-  font-size: clamp(28px, 6vw, 90px);
+  font-size: clamp(32px, 8vw, 90px);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: clamp(4px, 2.5vw, 18px);
+  letter-spacing: clamp(4px, 2vw, 18px);
   color: #c7c5c5;
   text-align: center;
-  left: 50%;
-  transform: translateX(-50%);
+  text-shadow: 0 0 15px rgba(74, 222, 128, 0.5);
   margin: 0;
-  text-shadow: 0 0 10px rgba(74, 222, 128, 0.7);
 }
 
 .branding-hero img {
-  flex: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-  padding:0;
+  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 }
 
-/* Bottom fade */
 .branding-hero::after {
   content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 60vh;
+  height: 30vh;
   background: linear-gradient(to bottom, transparent, #000);
-  pointer-events: none;
 }
 
-
 /* ============================= */
-/* CONTENT TYPOGRAPHY */
+/* CONTENT LAYOUT */
 /* ============================= */
-
 .coverpage {
-  max-width: 1700px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 80px 40px;
+  padding: 60px 40px;
   display: flex;
-  flex-direction: row;
-  gap: 20px;
+  flex-direction: column; /* Better for responsive flow */
+  gap: 50px;
+}
+
+.branding-info {
+  max-width: 1100px;
 }
 
 .coverpage h2 {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
+  line-height: 1.7;
   color: #d1d1d1;
-  margin: 0;
-  padding:0;
-  text-align:left;
+  margin-bottom: 35px;
 }
 
-/* Section labels */
 .coverpage h2 span {
   display: block;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   color: #ffffff;
   letter-spacing: 2px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   text-transform: uppercase;
-  position: relative;
-  text-align:left;
-  padding:0;
 }
 
-.coverpage h2 span::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  margin-top: 8px;
+.bullet-list {
+  margin-top: 10px;
+  line-height: 2;
 }
 
 /* ============================= */
-/* CARDS CONTAINER (FLEX GRID) */
+/* CARDS GRID */
 /* ============================= */
-
 .branding-grid {
   display: flex;
-  flex-wrap: nowrap;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 30px;
   justify-content: center;
-  margin-top: 40px;
 }
-
-/* ============================= */
-/* IMAGE CARDS */
-/* ============================= */
 
 .branding-card {
   position: relative;
-  width: 500px; 
-  max-width: 100%; 
+  flex: 1 1 400px; /* Base size 400px, grow/shrink as needed */
+  max-width: 450px;
   height: 300px;
   border-radius: 14px;
   overflow: hidden;
-  cursor: pointer;
-  transition: transform .35s ease, box-shadow .35s ease;
-  display: flex;
-}
-
-/* Make cards flexible so they wrap and resize on narrow viewports */
-.coverpage > a.branding-card {
-  flex: 1 1 320px; /* allow wrapping and flexible width */
-  max-width: 500px;
+  transition: all .4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .branding-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  flex: 1;
-  display:block;
 }
 
 .branding-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* ============================= */
 /* OVERLAY */
-/* ============================= */
-
 .overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 70%);
+  display: flex;
+  align-items: flex-end;
   padding: 25px;
   opacity: 0;
-  transition: all .4s ease;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  transition: opacity 0.3s ease;
 }
 
 .overlay h3 {
   color: white;
   font-size: 22px;
   margin: 0;
-  letter-spacing: 1px;
 }
 
 .branding-card:hover .overlay {
@@ -185,53 +169,53 @@
 }
 
 /* ============================= */
-/* RESPONSIVE */
+/* RESPONSIVE BREAKPOINTS */
 /* ============================= */
 
+/* IPAD / TABLETS */
 @media (max-width: 1024px) {
-
-  .branding-hero h2 {
-    font-size: 70px;
-    letter-spacing: 6px;
-  }
-
+  .branding-hero { height: 45vh; }
+  
   .branding-card {
-    width: 90%;
+    flex: 1 1 45%; /* Two per row */
     height: 260px;
   }
-
-  /* Stack content vertically on tablets */
-  .coverpage {
-    flex-direction: column;
-    align-items: stretch;
-  }
 }
 
-@media (max-width: 600px) {
-
-  .coverpage {
-    padding: 60px 20px;
-  }
-
-  .branding-hero {
-    height: 60vh;
-  }
-
-  .branding-hero h2 {
-    font-size: 42px;
-    letter-spacing: 2px;
+/* MOBILE DEVICES */
+@media (max-width: 768px) {
+  .back-btn {
+    top: 15px;
+    left: 15px;
+    padding: 8px 14px;
   }
 
   .branding-card {
-    width: 100%;
-    height: 220px;
+    flex: 1 1 100%; /* Full width */
+    height: 240px;
+  }
+
+  .overlay {
+    opacity: 1; /* Keep title visible on touch */
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 60%);
   }
 }
 
-/* Touch-friendly overlays: show overlay content on non-hover devices */
-@media (hover: none), (max-width: 600px) {
-  .overlay {
-    opacity: 1;
-    background: rgba(0, 0, 0, 0.45);
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .back-btn span { display: none; } /* Icon only */
+  
+  .brandinghero-heading {
+    font-size: 32px;
+    letter-spacing: 3px;
   }
+
+  .coverpage { padding: 30px 20px; }
+
+  .coverpage h2 { font-size: 15px; }
+}
+
+/* iPhone Notch Support */
+@supports (padding: env(safe-area-inset-top)) {
+  .back-btn { top: calc(env(safe-area-inset-top) + 10px); }
 }

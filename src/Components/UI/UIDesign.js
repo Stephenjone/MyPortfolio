@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./UIDesign.css";
 
 function UIDesign() {
+  const navigate = useNavigate();
+
   const UIProjects = [
     {
       id: 1,
@@ -25,41 +28,61 @@ function UIDesign() {
 
   return (
     <section className="ui">
+      {/* Back Button - Responsive */}
+      <button className="back-btn" onClick={() => navigate(-1)}>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        <span>Back</span>
+      </button>
+
       <div className="ui-hero">
-        <img src="/Assets/Brand-Design/Brand-coverpage.jpg" alt="" />
+        <img src="/Assets/Brand-Design/Brand-coverpage.jpg" alt="UI Design Banner" />
         <h2>UI Design</h2>
       </div>
+
       <div className="coverpage">
-        <div>
-          <h2><span>Overview</span>This section showcases user interface (UI) design work completed as part of my role as a Graphic Designer. These projects demonstrate my ability to create visually engaging and user-focused digital interfaces that support clear communication and functional interaction. These UI design projects illustrate my experience in delivering structured digital solutions that balance visual appeal with usability and business goals.</h2>
+        <div className="info-content">
+          <h2>
+            <span>Overview</span>
+            This section showcases user interface (UI) design work completed as part of my role as a Graphic Designer. These projects demonstrate my ability to create visually engaging and user-focused digital interfaces that support clear communication and functional interaction.
+          </h2>
 
-          <h2><span>Key Responsibilities</span>
-            ✔ Interpreted project briefs and functional requirements<br></br>
-            ✔ Developed wireframes and visual layout concepts<br></br>
-            ✔ Designed intuitive interface screens with consistent visual hierarchy<br></br>
-            ✔ Applied typography, color theory, and iconography for usability<br></br>
-            ✔ Created design assets for web and mobile platforms<br></br>
-            ✔ Prepared design files for handoff to developers<br></br>
-            ✔ Coordinated revisions based on stakeholder and user feedback</h2>
-
-          <h2><span>Tools Used</span>Figma, Adobe XD, Adobe Illustrator, Adobe Photoshop</h2>
-
-        </div>
-        {UIProjects.map((project) => (
-          <a
-            key={project.id}
-            href={project.link}
-            className="ui-card"
-            target="_blank" // This will open the library in a new tab
-            rel="noreferrer"
-          >
-            <img src={project.img} alt={project.title}
-            />
-            <div className="overlay">
-              <h3>{project.title}</h3>
+          <h2>
+            <span>Key Responsibilities</span>
+            <div className="bullet-list">
+              ✔ Interpreted project briefs and functional requirements<br/>
+              ✔ Developed wireframes and visual layout concepts<br/>
+              ✔ Designed intuitive interface screens with consistent visual hierarchy<br/>
+              ✔ Applied typography, color theory, and iconography for usability<br/>
+              ✔ Created design assets for web and mobile platforms<br/>
+              ✔ Prepared design files for handoff to developers<br/>
+              ✔ Coordinated revisions based on stakeholder and user feedback
             </div>
-          </a>
-        ))}
+          </h2>
+
+          <h2>
+            <span>Tools Used</span>
+            Figma, Adobe XD, Adobe Illustrator, Adobe Photoshop
+          </h2>
+        </div>
+
+        <div className="project-grid">
+          {UIProjects.map((project) => (
+            <a
+              key={project.id}
+              href={project.link}
+              className="ui-card"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={project.img} alt={project.title} />
+              <div className="overlay">
+                <h3>{project.title}</h3>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

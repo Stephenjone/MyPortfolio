@@ -9,7 +9,8 @@ function Projects() {
     { title: "Illustrations", path: "/Illustrations", className: "illustration-section", titleClass: "illustrations-title" },
     { title: "Branding", path: "/Branding", className: "branding-section", titleClass: "illustrations-title" },
     { title: "Brouchers & Catalogues", path: "/Brouchers", className: "brouchers-section", titleClass: "brouchers-title" },
-    { title: "UI Design", path: "/UIDesign", className: "ui-section", titleClass: "ui-title" }
+    { title: "UI Design", path: "/UIDesign", className: "ui-section", titleClass: "ui-title" },
+    { title: "Marketing", path: "/Marketing", className: "marketing-section", titleClass: "marketing-title" }
   ];
 
   return (

@@ -1,22 +1,55 @@
 /* ============================= */
 /* MAIN SECTION */
 /* ============================= */
-
 .brouchers {
   min-height: 100vh;
-  background: radial-gradient(circle at center, #000, #000000);
+  background: radial-gradient(circle at center, #111, #000);
+  color: #fff;
 }
+
+/* BACK BUTTON - Consistency across all pages */
+.back-btn {
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-btn svg { width: 18px; height: 18px; }
 
 /* ============================= */
 /* HERO SECTION */
 /* ============================= */
-
 .brouchers-hero {
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 55vh;
+}
+
+.brouchers-hero img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
 }
 
 .brouchers-hero::after {
@@ -25,176 +58,162 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 20vh;
-  background: linear-gradient(to bottom, transparent, #000000);
+  height: 25vh;
+  background: linear-gradient(to bottom, transparent, #000);
   z-index: 5;
-}
-
-.brouchers-hero img {
-  width: 100vw;
-  height: 50vh;
-  object-fit: cover;
-  display: block;
-  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 }
 
 .brouchers-hero h2 {
   font-family: 'Barques', sans-serif;
-  font-size: clamp(28px, 6vw, 70px);
+  font-size: clamp(32px, 6vw, 70px);
   font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: clamp(6px, 2.5vw, 18px);
+  letter-spacing: clamp(4px, 2vw, 18px);
   position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 30%;
   z-index: 10;
   color: #c7c5c5;
-  text-shadow: 0 0 10px rgba(74, 222, 128, 0.7);
+  text-align: center;
+  text-shadow: 0 0 15px rgba(74, 222, 128, 0.5);
+  width: 90%;
 }
 
 /* ============================= */
 /* MAIN CONTENT LAYOUT */
 /* ============================= */
-
 .coverpage {
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   gap: 80px;
   padding: 80px 40px;
 }
 
-/* LEFT COLUMN */
-.left-column {
-  flex: 1;
+.left-column, .right-column { flex: 1; }
+
+.coverpage h2 {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #d1d1d1;
+  margin-bottom: 40px;
 }
 
-/* RIGHT COLUMN */
-.right-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;   /* STACK tools + image */
-  gap: 40px;
+.coverpage h2 span {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #4ade80;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
 }
+
+.bullet-list { line-height: 2; margin-top: 10px; }
 
 /* ============================= */
 /* TOOLS BOX */
 /* ============================= */
-
 .tools-used {
   background: rgba(255, 255, 255, 0.03);
   padding: 30px;
   border-radius: 16px;
-}
-
-.tools-used h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #ffffff;
-  letter-spacing: 2px;
-}
-
-.tools-used p {
-  color: #d1d1d1;
-  line-height: 1.6;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 40px;
 }
 
 /* ============================= */
 /* CARD */
 /* ============================= */
-
 .brouchers-card {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 320px;
   border-radius: 18px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform .35s ease, box-shadow .35s ease;
+  transition: transform .35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .brouchers-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .brouchers-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, .45);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .5);
 }
-
-/* ============================= */
-/* OVERLAY */
-/* ============================= */
 
 .overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, .85));
-  padding: 20px;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .8), transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  padding: 25px;
   opacity: 0;
   transition: opacity .3s ease;
 }
 
-.overlay h3 {
-  color: white;
-  font-size: 22px;
-  margin: 0;
-}
+.overlay h3 { color: white; font-size: 20px; margin: 0; }
 
-.brouchers-card:hover .overlay {
-  opacity: 1;
-}
-
-/* Make overlay visible on touch devices */
-@media (hover: none), (max-width: 600px) {
-  .overlay { opacity: 1; }
-}
+.brouchers-card:hover .overlay { opacity: 1; }
 
 /* ============================= */
 /* RESPONSIVE */
 /* ============================= */
 
+/* IPAD / TABLETS */
 @media (max-width: 1024px) {
-
   .coverpage {
     flex-direction: column;
-    gap: 60px;
+    gap: 40px;
+    padding: 60px 40px;
+  }
+  
+  .left-column, .right-column { width: 100%; }
+
+  .brouchers-hero { height: 45vh; }
+
+  .brouchers-card { height: 280px; }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 768px) {
+  .back-btn {
+    top: 15px;
+    left: 15px;
+    padding: 8px 14px;
   }
 
-  .brouchers-hero h2 {
-    font-size: 50px;
-    letter-spacing: 8px;
-  }
+  .brouchers-hero h2 { font-size: 36px; top: 35%; }
 
-  .brouchers-card {
-    height: 260px;
+  .overlay {
+    opacity: 1; /* Visible on touch */
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent 50%);
   }
 }
 
-@media (max-width: 600px) {
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .back-btn span { display: none; }
+  
+  .coverpage { padding: 40px 20px; }
+  
+  .brouchers-hero img { height: 35vh; }
 
-  .coverpage {
-    padding: 60px 20px;
-  }
+  .brouchers-hero h2 { font-size: 28px; }
 
-  .brouchers-hero {
-    height: 60vh;
-  }
+  .tools-used { padding: 20px; }
+  
+  .brouchers-card { height: 220px; }
+}
 
-  .brouchers-hero h2 {
-    font-size: 32px;
-    letter-spacing: 4px;
-    text-align: center;
-  }
-
-  .brouchers-card {
-    height: 220px;
-  }
+/* Safe areas for notch */
+@supports (padding: env(safe-area-inset-top)) {
+  .back-btn { top: calc(env(safe-area-inset-top) + 10px); }
 }
