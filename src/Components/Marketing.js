@@ -2,16 +2,16 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Marketing.css";
 
-const bannerImages = [
-    {/*{ src: "/Assets/Marketing/1.jpg", alt: "Easter Outfits Banner" },
+{/*const bannerImages = [
+    { src: "/Assets/Marketing/1.jpg", alt: "Easter Outfits Banner" },
     { src: "/Assets/Marketing/2.jpg", alt: "70% Off Clearance" },
     { src: "/Assets/Marketing/3.jpg", alt: "Jewelry Event Sale" },
     { src: "/Assets/Marketing/4.jpg", alt: "Flash Sale Banner" },
     { src: "/Assets/Marketing/5.jpg", alt: "Flash Sale Banner" },
     { src: "/Assets/Marketing/6.jpg", alt: "Flash Sale Banner" },
-     */}
+     
 ];
-
+*/}
 
 const tileImages = [
     { src: "/Assets/Marketing/11.jpg", alt: "Marketing tile" },
